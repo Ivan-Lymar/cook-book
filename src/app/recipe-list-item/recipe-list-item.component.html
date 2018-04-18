@@ -1,0 +1,15 @@
+<div class="card">
+  <img class="card-img-top" src="{{item.picture}}"
+       alt="Card image cap">
+
+  <div class="card-body">
+    <h5 class="card-title">{{item.name}}</h5>
+    <p class="card-text">{{item.description}}</p>
+    <div class="stars">
+      <span class="star on" *ngFor="let i of fullStarCount"></span>
+      <span class="star half" *ngFor="let i of semiStarCount"></span>
+      <span class="star" *ngFor="let i of emptyStarCount"></span>
+    </div>
+    <a [routerLink]="['/recipe/', item.id]" class="btn btn-primary">Check recipe</a>
+  </div>
+</div>

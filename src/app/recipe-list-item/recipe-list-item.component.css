@@ -1,0 +1,60 @@
+.stars{
+float:right;
+}
+
+.star {
+    font-size: x-large;
+    width: 20px;
+    display: inline-block;
+    color: gray;
+}
+
+.star:last-child {
+    margin-right: 0;
+}
+
+.star:before {
+    content:'\2605';
+}
+
+.star.on {
+    color: gold;
+}
+
+.star.half:after {
+    content:'\2605';
+    color: gold;
+    position: absolute;
+    margin-left: -20px;
+    width: 10px;
+    overflow: hidden;
+}
+
+.card{
+   margin-bottom:20px;
+   border: 1px solid grey;
+   -moz-box-shadow:    -2px 2px 4px 2px #ccc;
+   -webkit-box-shadow: -2px 2px 4px 2px #ccc;
+   box-shadow:         -2px 2px 4px 2px #ccc;
+   background-color:white;
+}
+
+.card-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+@media (max-width: 990px) {
+  .stars{
+  float:left;
+  width:100%;
+  }
+}
